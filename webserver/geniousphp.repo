@@ -1,0 +1,5 @@
+[geniousphp]
+name=Geniousphp repository that contains my awesome RPMs for Enterprise Linux 7
+baseurl=http://192.168.33.30:8080/
+enabled=0
+gpgcheck=0

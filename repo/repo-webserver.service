@@ -1,0 +1,16 @@
+[Unit]
+Description= Static webserver that will serve RPM repository
+After=network.target
+
+[Service]
+WorkingDirectory=/home/vagrant/repo
+ExecStart=/usr/bin/python -m SimpleHTTPServer 8080
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=repo-webserver
+User=vagrant
+Group=vagrant
+
+[Install]
+WantedBy=multi-user.target

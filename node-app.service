@@ -1,0 +1,16 @@
+[Unit]
+Description=
+After=network.target nss-lookup.target
+
+[Service]
+ExecStart=/usr/bin/npm start
+WorkingDirectory=/usr/lib/node-app
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=node-app
+User=node-app
+Group=node-app
+
+[Install]
+WantedBy=multi-user.target
